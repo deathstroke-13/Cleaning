@@ -30,8 +30,8 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate (R.layout.fragment_home,container,false);
 
         models = new ArrayList<> ();
-        models.add (new Model (R.drawable.brochure,"One Day Jobs",""));
-        models.add (new Model (R.drawable.namecard,"One Day Jobs",""));
+        models.add (new Model (R.drawable.brochure,"One Day Jobs","Only one time jobs"));
+        models.add (new Model (R.drawable.namecard,"Membership 12x","Routine cleaning at 1 per month for 12 month.\nGet free discount on sale"));
 
         adapter = new Adapter (models, getActivity ());
 
