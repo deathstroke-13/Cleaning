@@ -35,10 +35,12 @@
         android:paddingBottom="10dp"/>
 
     <TextView
+        android:id="@+id/sideText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign In to continue"
         android:transitionName="trans_slogan"
+        android:textColor="@color/gray"
         android:textSize="18sp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"/>
@@ -50,6 +52,8 @@
         android:transitionName="trans_username"
         android:paddingTop="20dp"
         android:paddingBottom="5dp"
+        android:textColorHint="#000"
+        app:boxStrokeColor="#000"
         android:hint="Username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
@@ -65,8 +69,10 @@
         android:transitionName="trans_password"
         android:paddingTop="5dp"
         android:paddingBottom="10dp"
+        android:textColorHint="#000"
         android:hint="Password"
         app:passwordToggleEnabled="true"
+        app:boxStrokeColor="#000"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
@@ -81,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:text="Forget Password?"
+        android:textColor="#000"
         android:background="?android:attr/selectableItemBackground"/>
 
     <androidx.cardview.widget.CardView
@@ -95,6 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
+            android:textColor="#000"
             android:textAllCaps="false"
             android:background="#58ADBC"/>
 

@@ -10,6 +10,7 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     @BindView (R.id.btn_forgetPassword) Button btnForgetPassword;
     @BindView (R.id.et_username_login) TextInputLayout etUsername;
     @BindView (R.id.et_password_login) TextInputLayout etPassword;
+    @BindView (R.id.sideText) TextView sideText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +55,9 @@ public class LoginActivity extends AppCompatActivity {
         btnForgetPassword.setOnClickListener (view -> {
             Intent intentForgot = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
 
-            Pair[] pairs = new Pair[1];
+            Pair[] pairs = new Pair[2];
             pairs[0] = new Pair <View, String>(etUsername,"trans_username");
+            pairs[1] = new Pair <View, String>(sideText,"trans_slogan");
 
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation (LoginActivity.this,pairs);
             startActivity (intentForgot,options.toBundle ());

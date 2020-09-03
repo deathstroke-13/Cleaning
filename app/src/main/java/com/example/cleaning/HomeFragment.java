@@ -1,6 +1,7 @@
 package com.example.cleaning;
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,7 @@ public class HomeFragment extends Fragment {
     List<Model> models;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator ();
+    FloatingActionButton fab;
 
 
     @Nullable
@@ -28,6 +32,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate (R.layout.fragment_home,container,false);
+
+        fab = v.findViewById (R.id.fab_order);
 
         models = new ArrayList<> ();
         models.add (new Model (R.drawable.brochure,"One Day Jobs","Only one time jobs"));
@@ -65,6 +71,13 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        viewPager.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
 
             }
         });

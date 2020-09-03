@@ -51,6 +51,15 @@ public class Adapter extends PagerAdapter {
         desc.setText (models.get (position).getDescription ());
 
         container.addView (view,0);
+
+        view.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                if(position == 0){
+                }
+            }
+        });
+
         return view;
     }
 
