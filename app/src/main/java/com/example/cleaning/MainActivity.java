@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager ().beginTransaction ().replace (R.id.fragment_container,new HomeFragment ()).commit ();
         //setHomeItem(MainActivity.this);
 
-        final ScrollView layout = findViewById(R.id.layout_scroll);
+        //final ScrollView layout = findViewById(R.id.layout_scroll);
+        final FrameLayout layout = findViewById (R.id.frameLayout);
         mSnackbar = Snackbar.make(layout, "Tekan sekali lagi untuk keluar", Snackbar.LENGTH_SHORT);
 
         fab = findViewById (R.id.fab_order);

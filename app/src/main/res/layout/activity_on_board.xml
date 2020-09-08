@@ -10,7 +10,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPagerOnBoard"
         android:layout_width="match_parent"
-        android:layout_height="690dp">
+        android:layout_height="match_parent">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -18,7 +18,7 @@
         android:id="@+id/layoutDots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/viewPagerOnBoard"
+        android:layout_above="@+id/viewPagerOnBoard"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"/>
